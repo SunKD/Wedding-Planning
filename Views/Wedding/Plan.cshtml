@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+@model WeddingPlanner.Models.WeddingPlanViewModel;
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Plan Your Wedding</h1>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-controller="Wedding" asp-action="Create" method="POST" class="form-group">
+            <label asp-for="Wedder1"></label>
+            <input asp-for="Wedder1" class="form-control">
+            <span asp-validation-for="Wedder1"></span>
+
+            <label asp-for="Wedder2"></label>
+            <input asp-for="Wedder2" class="form-control">
+            <span asp-validation-for="Wedder2"></span>
+
+            <label asp-for="WeddingDate"></label>
+            <input asp-for="WeddingDate" class="form-control">
+            <span asp-validation-for="WeddingDate"></span>
+
+            <label asp-for="Address"></label>
+            <input asp-for="Address" class="form-control">
+            <span asp-validation-for="Address"></span>
+
+            <button type="submit" class="btn btn-info">Create</button>
+
+        </form>
+    </div>
+    <div class="col-md-6"></div>
+</div>

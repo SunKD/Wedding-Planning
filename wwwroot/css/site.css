@@ -1,0 +1,20 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+span{
+    display: block;
+}
+
+a {
+    color: #0060B6;
+    text-decoration: none;
+}
+
+a:hover 
+{
+    color:#00A0C6; 
+    text-decoration:none; 
+    cursor:pointer;  
+}
