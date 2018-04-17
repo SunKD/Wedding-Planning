@@ -115,11 +115,8 @@ namespace WeddingPlanner.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
-
-            ViewBag.ThisWedding = _context.WeddingGuests.Include(e => e.WeddingAttendee).Where(r => r.WeddingEventID == WeddingID).ToList();
-            ViewBag.Wedders = _context.Weddings.Where(r => r.WeddingID == WeddingID).ToList();
-            // System.Console.WriteLine(ViewBag.ThisWedding);
-            return View("GuestList");
+            Wedding query = _context.Weddings.Include(w => w.GuestLists).ThenInclude(g => g.WeddingAttendee).Where(r => r.WeddingID  == WeddingID).SingleOrDefault();
+            return View(query);
         }
 
         [HttpGet]

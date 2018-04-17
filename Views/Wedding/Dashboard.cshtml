@@ -20,7 +20,7 @@
             foreach(var item in @ViewBag.Weddings) {
                 <form action="rsvp" method="POST">
                 <tr>
-                        <td><a href="guestlist/@item.WeddingID" >@item.Wedder1 & @item.Wedder2</a></td>
+                        <td><a href="guestlist/@item.WeddingID" class="wedders">@item.Wedder1 & @item.Wedder2</a></td>
                         <td>@item.WeddingDate.ToString("MMM dd, yyyy hh:mm tt")</td>
                         <td>@item.GuestLists.Count</td>
                         <input type="hidden" value="@item.WeddingID" name="WeddingID">
